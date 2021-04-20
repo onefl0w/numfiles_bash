@@ -1,10 +1,16 @@
+#!/bin/bash
+
+UNDERLINED="\e[4m"
+NORMAL="\e[0m"
+GREEN="\e[32m"
+
 numfiles() { 
     N="$(ls $1 | wc -l)"; 
-    if [ -z "$1" ] # If no argument specified
+    if [ -z "$1" ]
     then
-    	echo "$N files in $(pwd)" # Print the current directory
+	    echo "${UNDERLINED}$N${NORMAL} files in ${GREEN}$(pwd)"
     else
-    	echo "$N files in $1"
+    	echo "${UNDERLINED}$N${NORMAL} files in ${GREEN}$1"
     fi
 }
 
