@@ -8,9 +8,9 @@ numfiles() {
     N="$(ls $1 | wc -l)"; 
     if [ -z "$1" ]
     then
-	    echo "${UNDERLINED}$N${NORMAL} files in ${GREEN}$(pwd)"
+	    echo "${UNDERLINED}$N${NORMAL} file(s) in ${GREEN}$(pwd)"
     else
-    	echo "${UNDERLINED}$N${NORMAL} files in ${GREEN}$1"
+    	echo "${UNDERLINED}$N${NORMAL} file(s) in ${GREEN}$1"
     fi
 }
 
